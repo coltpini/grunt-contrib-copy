@@ -47,6 +47,7 @@ copy: {
     files: [
       {src: ['path/*'], dest: 'dest/', filter: 'isFile'}, // includes files in path
       {src: ['path/**'], dest: 'dest/'}, // includes files in path and its subdirs
+      {src: ['path/**'], dest: 'dest/', onlyMod: true},// only copies the files that have been modified.
       {expand: true, cwd: 'path/', src: ['**'], dest: 'dest/'}, // makes all src relative to cwd
       {expand: true, flatten: true, src: ['path/**'], dest: 'dest/', filter: 'isFile'} // flattens results to a single level
     ]
