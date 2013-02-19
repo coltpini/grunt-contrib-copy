@@ -42,7 +42,7 @@ module.exports = function(grunt) {
           dest = filePair.dest;
         }
         // new stuff.
-        if(filePair.onlyNewer){
+        if(filePair.onlyMod){
           var srcFile, destFile;
           try{
             srcFile = fs.statSync(src);
